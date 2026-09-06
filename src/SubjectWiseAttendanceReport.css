@@ -1,0 +1,31 @@
+.subject-wise-report{background:#fff;color:#17254a;padding:8px;font-size:10px;border-radius:4px}
+.swar-scroll{overflow:auto}
+.subject-wise-report table{border-collapse:collapse;width:100%;font-size:10px;background:#fff}
+.subject-wise-report th,.subject-wise-report td{padding:6px;text-align:left;border:0;border-bottom:1px solid #e4e4e4;vertical-align:top;background:#fff}
+.subject-wise-report th{font-weight:600}
+.swar-list{min-width:760px;table-layout:fixed}
+.swar-list th{color:#3498cb}
+.swar-list th:nth-child(5){width:27%}
+.swar-list th:last-child{width:34px;color:#222}
+.subject-wise-report select,.subject-wise-report input{width:100%;min-width:0;height:24px;padding:2px 4px;box-sizing:border-box;border:1px solid #ccc;border-radius:4px;background:#fff;color:#17254a;font:inherit}
+.subject-wise-report button{border:1px solid #ddd;border-radius:4px;background:#fff;color:#3498cb;font:inherit;padding:4px 8px;cursor:pointer}
+.subject-wise-report button:disabled{opacity:.5;cursor:default}
+.subject-wise-report button:hover:not(:disabled){background:#e6f3fb}
+.subject-wise-report .swar-view{border:0;padding:0;min-width:24px;min-height:24px;display:inline-flex;align-items:center;justify-content:center}
+.subject-wise-report :is(button,input,select):focus-visible{outline:2px solid #3498cb;outline-offset:2px}
+.subject-wise-report header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}
+.subject-wise-report h2{font-size:14px;margin:0}
+.subject-wise-report header p{margin:6px 0 0}
+.subject-wise-report .swar-date{position:relative;min-width:76px;background:#fff;color:#263238;text-align:center}
+.swar-date strong,.swar-date small{display:block;white-space:nowrap;line-height:1.15}
+.swar-date strong{font-size:12px}
+.swar-date small{font-size:10px;font-weight:400}
+.swar-day{display:block;font-size:30px;font-weight:700;line-height:1.1;margin-bottom:2px}
+.swar-detail td:first-child,.swar-detail td:nth-child(2){white-space:nowrap}
+.swar-detail td:nth-child(n+3){text-align:center}
+.subject-wise-report .swar-present{color:#239547}
+.subject-wise-report .swar-absent,.swar-error{color:#d93030}
+.swar-legend{color:#667085;margin:8px 0}
+.swar-pagination{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:10px}
+.swar-pagination label,.swar-pagination nav{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.swar-pagination select{width:58px}

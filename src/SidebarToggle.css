@@ -1,0 +1,26 @@
+.sidebar {
+  transform: translateX(-100%);
+  transition: transform 0.25s ease;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.workspace {
+  width: 100%;
+  margin-left: 0;
+  transition: width 0.25s ease, margin-left 0.25s ease;
+}
+
+.app.menu-open .workspace {
+  width: calc(100% - 240px);
+  margin-left: 240px;
+}
+
+@media (max-width: 1250px) {
+  .app.menu-open .workspace {
+    width: 100%;
+    margin-left: 0;
+  }
+}

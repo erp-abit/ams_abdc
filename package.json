@@ -1,0 +1,33 @@
+{
+  "name": "ams_abdc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node server/index.js",
+    "client": "vite",
+    "build": "vite build",
+    "dev": "concurrently npm:server npm:client",
+    "db:apply-user-logins": "node scripts/apply-abdc-db-user-logins-schema.mjs",
+    "db:apply-programme-semesters": "node scripts/apply-programme-semester-definitions-schema.mjs",
+    "db:create-super-admin": "node scripts/create-super-admin.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pg": "^8.23.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "xlsx-js-style": "^1.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5",
+    "vite": "^8.2.2"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "AJAY BINAY DEGREE COLLEGE",
+  "short_name": "ABDC",
+  "description": "AJAY BINAY DEGREE COLLEGE",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#126be4",
+  "icons": [
+    {
+      "src": "/logo-rounded.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
