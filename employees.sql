@@ -1,14 +1,16 @@
 -- Core employee table required by the AMS backend.
 -- This script is safe to run more than once.
 
-CREATE TABLE IF NOT EXISTS employees (
+CREATE SCHEMA IF NOT EXISTS public;
+
+CREATE TABLE IF NOT EXISTS public.employees (
   employee_id BIGSERIAL PRIMARY KEY,
   user_id BIGINT UNIQUE,
   institution_id BIGINT NOT NULL,
   department_id BIGINT,
   designation_id BIGINT,
   campus_id BIGINT,
-  reporting_employee_id BIGINT REFERENCES employees(employee_id) ON DELETE SET NULL,
+  reporting_employee_id BIGINT REFERENCES public.employees(employee_id) ON DELETE SET NULL,
 
   employee_code VARCHAR(30) NOT NULL UNIQUE,
   first_name VARCHAR(100) NOT NULL,
@@ -45,15 +47,15 @@ CREATE TABLE IF NOT EXISTS employees (
 );
 
 CREATE INDEX IF NOT EXISTS employees_institution_id_idx
-  ON employees (institution_id);
+  ON public.employees (institution_id);
 
 CREATE INDEX IF NOT EXISTS employees_department_id_idx
-  ON employees (department_id);
+  ON public.employees (department_id);
 
 CREATE INDEX IF NOT EXISTS employees_designation_id_idx
-  ON employees (designation_id);
+  ON public.employees (designation_id);
 
 CREATE INDEX IF NOT EXISTS employees_status_idx
-  ON employees (status);
+  ON public.employees (status);
 
-COMMENT ON TABLE employees IS 'Employee master records used by the AMS application.';
+COMMENT ON TABLE public.employees IS 'Employee master records used by the AMS application.';
